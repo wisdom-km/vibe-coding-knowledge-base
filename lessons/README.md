@@ -4,7 +4,12 @@
 
 这里不放具体项目细节，而是抽象后的「模式」或「反模式」。
 
-## 示例主题
+## 已沉淀
+
+- [seams-not-rooms.md](seams-not-rooms.md) — 预埋接缝，不预埋空房间
+- [dev-map-beats-chat.md](dev-map-beats-chat.md) — 开发地图覆盖聊天记忆
+
+## 待写主题
 
 - 为什么「先让 AI 解释根因」比直接修更有效
 - Context 文件过长的代价

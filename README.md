@@ -32,12 +32,29 @@ vibe-coding-knowledge-base/
 │   └── templates/
 │       └── stage-log.md          # 单个阶段的记录模板（复制使用）
 ├── projects/                     # 真实项目经验归档（按项目建文件夹）
-│   └── _example-project/
+│   ├── _example-project/
+│   └── mira_new/                 # 第一份完整案例：DirectorDesk 0-1
 ├── prompts/                      # 可复用、经过验证的提示词库
 ├── lessons/                      # 跨项目提炼的通用教训
 ├── tools/                        # 工具使用经验（Cursor / Grok / Godot / Claude 等）
 └── CONTRIBUTING.md
 ```
+
+---
+
+## 真实案例
+
+| 项目 | 一句话 | 入口 |
+|------|--------|------|
+| [DirectorDesk / mira_new](projects/mira_new/) | C++ 3D 导演台：vibe coding 从空仓库到可安装 P0；接缝先于功能 | [案例 README](projects/mira_new/README.md) |
+
+从这份案例抽出的通用教训：
+
+- [为变化预留接缝，不为幻想预留房间](lessons/seams-not-rooms.md)
+- [聊天不作数，开发地图才作数](lessons/dev-map-beats-chat.md)
+- [开发地图优先 Prompt](prompts/architecture/dev-map-first.md)
+
+产品源码与现行架构地图：[wisdom-km/mira_new](https://github.com/wisdom-km/mira_new) · [架构目录](https://wisdom-km.github.io/mira_new/)
 
 ---
 
