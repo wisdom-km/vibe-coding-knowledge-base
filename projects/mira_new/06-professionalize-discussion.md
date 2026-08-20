@@ -11,4 +11,4 @@ Undo 可以排在后面，因为 Command 已经在，那是启用不是发明。
 
 把「专业」理解成功能清单，模型会铺 Undo、时间轴、脚本、云，全撞红线。「咨询 → 写 md → 再编码」其实是在规定 AI 的权限：文档写到哪，手才能伸到哪。
 
-相关：[先做完，再谈专业](../../lessons/complete-then-professionalize.md)、[建议往哪放](../../lessons/advice-to-map-loop.md)、[填卡](../../docs/templates/advice-intake.md)。
+相关：[03 · 先做完，再谈专业](../../lessons/03-先做完再谈专业.md)、[04 · 建议往哪放](../../lessons/04-别人给的建议先放进地图.md)、[填卡](../../docs/templates/advice-intake.md)。

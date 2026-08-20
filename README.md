@@ -10,12 +10,12 @@
 
 不想顺着项目读，直接看 [lessons](lessons/README.md)。常用的几篇：
 
-- [聊天为什么靠不住](lessons/dev-map-beats-chat.md)
-- [接缝和空房间](lessons/seams-not-rooms.md)
-- [先做完，再谈专业](lessons/complete-then-professionalize.md)
-- [别人给的建议往哪放](lessons/advice-to-map-loop.md)
-- [IA 到底管什么](lessons/ia-philosophy.md)
-- [骨架锁死之后怎么改](lessons/lock-ia-skeleton.md)
+- [01 · 聊天为什么靠不住](lessons/01-聊天为什么靠不住.md)
+- [02 · 接缝和空房间](lessons/02-接缝和空房间.md)
+- [03 · 先做完，再谈专业](lessons/03-先做完再谈专业.md)
+- [04 · 别人给的建议往哪放](lessons/04-别人给的建议先放进地图.md)
+- [05 · IA 到底管什么](lessons/05-IA到底管什么.md)
+- [06 · 骨架锁死之后怎么改](lessons/06-骨架锁死之后怎么改.md)
 
 填表用 [建议卡](docs/templates/advice-intake.md) 和 [IA 骨架](docs/templates/ia-skeleton.md)。给 AI 复制的短指令在 `prompts/architecture/`。
 

@@ -8,4 +8,4 @@
 
 P0 用 ImGui docking 把每个功能做成可拆窗口，对「先完成」是对的，对 IA 是债。好在 Command 和快照已经能支撑「点卡片等于选中 Shot」，缺的是规定，不是技术。
 
-填好的表在 [07-ia-skeleton.md](07-ia-skeleton.md)。通论在 [IA 到底管什么](../../lessons/ia-philosophy.md) 和 [骨架锁死之后怎么改](../../lessons/lock-ia-skeleton.md)。
+填好的表在 [07-ia-skeleton.md](07-ia-skeleton.md)。通论在 [05 · IA 到底管什么](../../lessons/05-IA到底管什么.md) 和 [06 · 骨架锁死之后怎么改](../../lessons/06-骨架锁死之后怎么改.md)。
