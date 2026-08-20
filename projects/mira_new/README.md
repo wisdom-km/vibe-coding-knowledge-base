@@ -40,6 +40,7 @@ Vibe coding 把「很多人一起改」换成「很多段没有共同记忆的�
 | 11 | UX、安装包、文档 | `packaging/windows` | `phase-10-p0`… |
 | 12 | 滚轮闪屏、Inno 语言、架构图 | 见 `04-debug.md` | `phase-10-p1` |
 | 13 | 接缝知识库 + 模块数锁定 | mira_new 的 `07`/`08` | 文档提交 |
+| 14 | 先完成再完美、建议进地图 | 见 `06-professionalize-discussion.md` | 知识库，未改产品源码 |
 
 ## 本文件夹
 
@@ -48,9 +49,14 @@ Vibe coding 把「很多人一起改」换成「很多段没有共同记忆的�
 - [03-implementation.md](03-implementation.md) — 按 Phase 落地，源码落点
 - [04-debug.md](04-debug.md) — 真实坑与修复
 - [05-reflection.md](05-reflection.md) — 哪些能做哪些不能、下一步
+- [06-professionalize-discussion.md](06-professionalize-discussion.md) — 先完成再完美、专业化重构原则、咨询如何进 md
 
 跨项目提炼：
 
 - [lessons/seams-not-rooms.md](../../lessons/seams-not-rooms.md)
 - [lessons/dev-map-beats-chat.md](../../lessons/dev-map-beats-chat.md)
+- [lessons/complete-then-professionalize.md](../../lessons/complete-then-professionalize.md)
+- [lessons/advice-to-map-loop.md](../../lessons/advice-to-map-loop.md)
 - [prompts/architecture/dev-map-first.md](../../prompts/architecture/dev-map-first.md)
+- [prompts/architecture/advice-intake.md](../../prompts/architecture/advice-intake.md)
+- [docs/templates/advice-intake.md](../../docs/templates/advice-intake.md)

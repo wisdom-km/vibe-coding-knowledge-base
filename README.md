@@ -30,7 +30,8 @@ vibe-coding-knowledge-base/
 │   │   ├── 04-debug-validate.md
 │   │   └── 05-reflection.md
 │   └── templates/
-│       └── stage-log.md          # 单个阶段的记录模板（复制使用）
+│       ├── stage-log.md          # 单个阶段的记录模板（复制使用）
+│       └── advice-intake.md      # 咨询建议摄入卡（决定前不改代码）
 ├── projects/                     # 真实项目经验归档（按项目建文件夹）
 │   ├── _example-project/
 │   └── mira_new/                 # 第一份完整案例：DirectorDesk 0-1
@@ -52,7 +53,11 @@ vibe-coding-knowledge-base/
 
 - [为变化预留接缝，不为幻想预留房间](lessons/seams-not-rooms.md)
 - [聊天不作数，开发地图才作数](lessons/dev-map-beats-chat.md)
+- [先完成再完美，专业领域是下一场地图修订](lessons/complete-then-professionalize.md)
+- [专家建议进地图，不进下一句 Prompt](lessons/advice-to-map-loop.md)
 - [开发地图优先 Prompt](prompts/architecture/dev-map-first.md)
+- [咨询结果收成地图 Prompt](prompts/architecture/advice-intake.md)
+- [建议摄入模板](docs/templates/advice-intake.md)
 
 产品源码与现行架构地图：[wisdom-km/mira_new](https://github.com/wisdom-km/mira_new) · [架构目录](https://wisdom-km.github.io/mira_new/)
 
