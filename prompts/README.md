@@ -1,25 +1,11 @@
-# Prompts 库
+# Prompts
 
-这里存放**经过真实项目验证**的提示词模板。
+这里只放真正用过的。注明从哪个项目来、什么时候该用。能复制就直接复制。
 
-## 使用原则
+已经从 DirectorDesk 收进来的：
 
-- 只放真正用过、效果明确的提示词
-- 每个提示词注明：适用场景、来源项目、注意事项
-- 优先写成「可直接复制」的完整版本
+- [dev-map-first.md](architecture/dev-map-first.md) — 跨很多场对话的项目，先读仓库地图
+- [advice-intake.md](architecture/advice-intake.md) — 刚咨询完，只整理文档，先别改代码
+- [ia-slot-orders.md](architecture/ia-slot-orders.md) — 改界面时点名槽位，别说「专业一点」
 
-## 已验证
-
-- [architecture/dev-map-first.md](architecture/dev-map-first.md) — 跨对话项目：地图优先、禁止聊天覆盖事实（来源：mira_new）
-- [architecture/advice-intake.md](architecture/advice-intake.md) — 咨询后只沉淀文档、先不改代码（来源：mira_new）
-- [architecture/ia-slot-orders.md](architecture/ia-slot-orders.md) — 按槽位下单，禁止「整体更专业」（来源：mira_new）
-
-## 建议分类
-
-- `context-engineering/`
-- `debugging/`
-- `refactor/`
-- `architecture/`
-- `godot/` 或具体技术栈
-
-把你验证过的好提示词直接提交进来。
+还可以按场景往 `debugging/`、`refactor/` 这些目录里加。

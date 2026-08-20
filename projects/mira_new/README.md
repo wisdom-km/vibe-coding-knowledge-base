@@ -1,69 +1,30 @@
-# 案例：DirectorDesk（mira_new）
+# DirectorDesk（mira_new）
 
-**一句话**：用 vibe coding 从空仓库做到可安装的 3D 导演台——Markdown 剧本 → 资源库 → 预设机位 → 分镜画布 → PNG 导出。
+一个人加 AI，从空仓库做到能安装的 3D 导演台。用户路径很短：写剧本，拿模型，摆机位，看分镜，导出 PNG。
 
-| 项 | 内容 |
-|----|------|
-| 产品名 | DirectorDesk |
-| 代码仓库 | [wisdom-km/mira_new](https://github.com/wisdom-km/mira_new) |
-| 架构目录 | [wisdom-km.github.io/mira_new](https://wisdom-km.github.io/mira_new/) |
-| 技术栈 | C++17 · CMake + vcpkg · GLFW · Dear ImGui · bgfx |
-| 周期 | 2026-08-18 → 2026-08-19（P0 闭环 + 知识沉淀） |
-| 工具 | Cursor · 多轮 Agent · GitHub Actions |
-| 当前状态 | Phase 10 完成；Demo 迭代政策 `07`/`08` 生效；AI 模块冻结 |
+代码在 [wisdom-km/mira_new](https://github.com/wisdom-km/mira_new)。能缩放的图在 [GitHub Pages](https://wisdom-km.github.io/mira_new/)。C++17，CMake + vcpkg，GLFW，ImGui，bgfx。大约两天走完 P0，后面的讨论进了这个知识库，产品源码没跟着改。
 
-源码里的权威地图仍在产品仓库：`docs/dev-map/00`–`08`。本案例只沉淀**过程、决策、坑**，不复制契约签名，避免第二个事实源。
+契约仍以产品仓库 `docs/dev-map` 为准。这里只记当时怎么想、踩过什么、为什么没把未来三年都预埋进去。
 
-## 读这个案例之前先记住
+先记一句就够：不是一开始猜中所有功能，是先画清哪一块可以单独加、单独删。Vibe coding 没有共同记忆的团队，只有一段段对话。接缝同样必要。聊天不作数。
 
-架构的核心不是「一开始猜到以后所有功能」，而是先画接缝：
+## 怎么走过来的
 
-**哪一块可以独立加、独立删、独立坏，而不把整栋楼拆掉。**
+先写开发地图，再写窗口。空壳验证日志和中文路径。尽快把渲染和离屏 PNG 打通，因为后面导出和缩略图都要靠它。模型在后台加载，主线程再上传 GPU。剧本、机位、本地库、工程文件、分镜画布，按这个顺序接到一条能跑完的路上。在线资产和 AI 接口放在闭环之后；AI 至今没接到 App 上，这是故意冻结。
 
-Vibe coding 把「很多人一起改」换成「很多段没有共同记忆的对话」。接缝同样必要。聊天不作数。
+中间有过短命分支，phase-4 的 tag 因此不干净。视口滚轮会闪，是缩略图在主循环里多推了一帧。安装包的中文向导编不出来，因为 winget 的 Inno 不带那份语言文件。GitHub 上的架构图一度扁掉，是 SVG 被 CSS 限宽。这些写在 [04-debug.md](04-debug.md)。
 
-## 时间线（0 → 1）
+P0 做完之后，我们把「模块数锁定」和「先完成再完美」写进产品地图，又在知识库里补了 IA：现在的乱，主要是四个窗口都像主角。
 
-| 顺序 | Phase / 事件 | 源码证据 | Tag |
-|------|----------------|----------|-----|
-| 0 | 先写开发地图，再写代码 | `docs/dev-map/` 先于业务 | — |
-| 1 | 空壳：窗口、日志、UTF-8 路径、CI | `src/Core` `src/Platform` | `phase-0-skeleton` |
-| 2 | 尽早打掉渲染风险：视口 + 离屏 PNG | `IRenderer` + `backends/bgfx` | `phase-1-render-camera` |
-| 3 | 后台加载 GLB/OBJ，主线程上 GPU | `IModelLoader` + `ResultQueue` | `phase-2-model-import` |
-| 4 | Markdown 剧本 Scene/Shot | `src/Script` | `phase-3-script` |
-| 5 | 预设机位、多相机、地面格网 | `src/Camera` | 经短命分支合入，无独立 `phase-4` tag |
-| 6 | 本地资源库 | `src/Asset/Library.cpp` | `phase-5-local-assets` |
-| 7 | `.ddproj` + Shot↔相机 | `ProjectFile` `Link::Table` | `phase-6-project-link` |
-| 8 | 分镜画布 + 导出（本地闭环走通） | `Storyboard` `Export` | `phase-7-core-loop` |
-| 9 | 官方在线资产（固定源） | `OfficialCatalog.cpp` | `phase-8-online-assets` |
-| 10 | 供应商无关 AI 接口，不接线 | `src/AI`，App 未调用 | `phase-9-ai-interfaces` |
-| 11 | UX、安装包、文档 | `packaging/windows` | `phase-10-p0`… |
-| 12 | 滚轮闪屏、Inno 语言、架构图 | 见 `04-debug.md` | `phase-10-p1` |
-| 13 | 接缝知识库 + 模块数锁定 | mira_new 的 `07`/`08` | 文档提交 |
-| 14 | 先完成再完美、建议进地图 | 见 `06-professionalize-discussion.md` | 知识库，未改产品源码 |
-| 15 | IA 哲学：锁槽位与选择模型 | 见 `07-ia-skeleton.md` | 草案，未改产品源码 |
+## 按时间读
 
-## 本文件夹
+1. [为什么做这个](01-ideation.md)
+2. [架构怎么选](02-planning.md)
+3. [代码实际落在哪](03-implementation.md)
+4. [修过的坑](04-debug.md)
+5. [做完之后的取舍](05-reflection.md)
+6. [专业化和咨询怎么进文档](06-professionalize-discussion.md)
+7. [导演台 IA 骨架草案](07-ia-skeleton.md)
+8. [IA 那场讨论](08-ia-philosophy-log.md)
 
-- [01-ideation.md](01-ideation.md) — 为什么做、用户路径宪法
-- [02-planning.md](02-planning.md) — 架构路线怎么选、预埋接缝不预埋房间
-- [03-implementation.md](03-implementation.md) — 按 Phase 落地，源码落点
-- [04-debug.md](04-debug.md) — 真实坑与修复
-- [05-reflection.md](05-reflection.md) — 哪些能做哪些不能、下一步
-- [06-professionalize-discussion.md](06-professionalize-discussion.md) — 先完成再完美、专业化重构原则、咨询如何进 md
-- [07-ia-skeleton.md](07-ia-skeleton.md) — 导演台 IA 骨架草案（主舞台、选中、七槽、三工作区）
-- [08-ia-philosophy-log.md](08-ia-philosophy-log.md) — IA 讨论阶段记录
-
-跨项目提炼：
-
-- [lessons/seams-not-rooms.md](../../lessons/seams-not-rooms.md)
-- [lessons/dev-map-beats-chat.md](../../lessons/dev-map-beats-chat.md)
-- [lessons/complete-then-professionalize.md](../../lessons/complete-then-professionalize.md)
-- [lessons/advice-to-map-loop.md](../../lessons/advice-to-map-loop.md)
-- [lessons/ia-philosophy.md](../../lessons/ia-philosophy.md)
-- [lessons/lock-ia-skeleton.md](../../lessons/lock-ia-skeleton.md)
-- [prompts/architecture/dev-map-first.md](../../prompts/architecture/dev-map-first.md)
-- [prompts/architecture/advice-intake.md](../../prompts/architecture/advice-intake.md)
-- [prompts/architecture/ia-slot-orders.md](../../prompts/architecture/ia-slot-orders.md)
-- [docs/templates/advice-intake.md](../../docs/templates/advice-intake.md)
-- [docs/templates/ia-skeleton.md](../../docs/templates/ia-skeleton.md)
+抽出去、换项目也能用的，在 [lessons](../../lessons/README.md)。填表和 Prompt 在 [templates](../../docs/templates/) 和 [prompts/architecture](../../prompts/architecture/)。

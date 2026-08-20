@@ -1,12 +1,10 @@
-# 示例项目（Example Project）
+# 示例项目
 
-这里放真实项目的阶段记录。
-
-建议结构：
+真实项目按这个形状归档即可。不必五个文件都有，有过的阶段再写。
 
 ```
-_example-project/
-├── README.md                 # 项目一句话介绍 + 时间线
+你的项目名/
+├── README.md          一句话是什么，以及按哪几篇读
 ├── 01-ideation.md
 ├── 02-planning.md
 ├── 03-implementation.md
@@ -14,4 +12,4 @@ _example-project/
 └── 05-reflection.md
 ```
 
-把 `docs/templates/stage-log.md` 复制过来改名即可。
+底稿用 `docs/templates/stage-log.md`。完整例子见旁边的 [mira_new](../mira_new/)。

@@ -1,53 +1,58 @@
-# Lessons 通用教训库
+# Lessons
 
-跨项目提炼出的通用洞见。
+这里不写某个函数怎么声明，只写换个项目还用得上的判断。具体发生过什么，去 `projects/`。
 
-这里不放具体项目的函数签名或 Command 清单，只放「模式 / 反模式」。项目细节在 `projects/<name>/`。
+新开项目的话，建议按这个顺序读，不必一次读完：
 
-**读法**：新开一个 vibe coding 项目时，按下面「建议阅读顺序」扫一遍；做 UI 专业化时加读 IA 两篇。
+1. [聊天为什么靠不住](dev-map-beats-chat.md)
+2. [接缝和空房间](seams-not-rooms.md)
+3. [先做完，再谈专业](complete-then-professionalize.md)
+4. [别人给的建议往哪放](advice-to-map-loop.md)
 
-## 建议阅读顺序
+界面开始「想专业一点」时，再读：
 
-1. [dev-map-beats-chat.md](dev-map-beats-chat.md) — 聊天不作数  
-2. [seams-not-rooms.md](seams-not-rooms.md) — 预埋接缝，不预埋空房间  
-3. [complete-then-professionalize.md](complete-then-professionalize.md) — 先完成再完美  
-4. [advice-to-map-loop.md](advice-to-map-loop.md) — 咨询进地图  
-5. [ia-philosophy.md](ia-philosophy.md) — IA 是什么  
-6. [lock-ia-skeleton.md](lock-ia-skeleton.md) — 锁槽位再优化  
+5. [IA 到底管什么](ia-philosophy.md)
+6. [骨架锁死之后怎么改](lock-ia-skeleton.md)
 
-配套模板与 Prompt 在仓库根 README 的「真实案例」下列出。
+---
 
-## 已沉淀
+### 记忆和边界
 
-### 记忆与接缝
+[聊天为什么靠不住](dev-map-beats-chat.md)
 
-- [dev-map-beats-chat.md](dev-map-beats-chat.md)  
-  开发地图覆盖聊天记忆。新开对话只 clone 仓库，也要知道该做什么、不该做什么。
+对话一关，架构就没了。能接着干的，是仓库里那份地图，不是昨天晚上的聊天记录。
 
-- [seams-not-rooms.md](seams-not-rooms.md)  
-  架构回答「哪一块可以独立加、独立删、独立坏」。预埋接口与所有权，不预埋空表、空服务、空模块。
+[接缝和空房间](seams-not-rooms.md)
 
-### 完成之后怎么变专业
+该提前想的是块与块怎么说话、数据归谁。不该提前建的是空接口、空模块、三年后才用的房间。
 
-- [complete-then-professionalize.md](complete-then-professionalize.md)  
-  「先完成再完美」和「做成专业领域软件」是同一条路的两段。专业化是修订地图，不是抄 Maya 目录推倒重来。
+### 做完以后
 
-- [advice-to-map-loop.md](advice-to-map-loop.md)  
-  专家或 AI 的建议默认是草案。人勾选吸收 / 推迟 / 拒绝后，只改被点名的 markdown，禁止聊完直接重构。
+[先做完，再谈专业](complete-then-professionalize.md)
 
-### 信息架构（IA）
+主路径能走通，才叫完成。专业不是把 Maya 的目录抄过来，是沿着还活着的那几条能力往深里做。
 
-- [ia-philosophy.md](ia-philosophy.md)  
-  IA 管东西放哪、叫什么、一次处理哪一层，不管颜色图标。DCC 六条：一个主舞台、一种选中、按职责分区、工作区换班、名字稳定、主路径外露。
+[别人给的建议往哪放](advice-to-map-loop.md)
 
-- [lock-ia-skeleton.md](lock-ia-skeleton.md)  
-  先锁槽位和选择模型，再搬家、减入口，最后才换皮。Vibe coding 按槽位下单，禁止「整体更专业一点」。
+专家和 AI 说的都先当草案。你勾选之后，只改点名的那几份 md。聊完直接开重构，等于又把聊天当成了宪法。
 
-## 待写主题
+### 屏幕怎么组织
 
-- 为什么「先让 AI 解释根因」比直接修更有效
-- Context 文件过长的代价
-- 小步提交在 Vibe Coding 中的真实价值
-- 什么时候应该停下来自己写，而不是继续提示
+[IA 到底管什么](ia-philosophy.md)
 
-每条 lesson 用独立 `.md` 文件，标题清晰；本 README 只做目录。新增 lesson 时必须同时改本文件。
+IA 管东西放哪、叫什么、一次看哪一层。不管圆角和图标。Photoshop 和 Blender 长得不像，骨架很像。
+
+[骨架锁死之后怎么改](lock-ia-skeleton.md)
+
+先规定主舞台和槽位，再搬家、减按钮。跟 AI 下单要说「只动检查器」，别说「整体专业一点」。
+
+---
+
+还想写、还没写的：
+
+- 修之前先让 AI 讲清楚根因，是不是真的更省事
+- 上下文贴太长会怎样
+- 小步提交在和 AI 协作时到底值不值
+- 什么时候该自己写，别再提示了
+
+新加一篇 lesson，记得回来改这份目录。
