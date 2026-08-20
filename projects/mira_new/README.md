@@ -41,6 +41,7 @@ Vibe coding 把「很多人一起改」换成「很多段没有共同记忆的�
 | 12 | 滚轮闪屏、Inno 语言、架构图 | 见 `04-debug.md` | `phase-10-p1` |
 | 13 | 接缝知识库 + 模块数锁定 | mira_new 的 `07`/`08` | 文档提交 |
 | 14 | 先完成再完美、建议进地图 | 见 `06-professionalize-discussion.md` | 知识库，未改产品源码 |
+| 15 | IA 哲学：锁槽位与选择模型 | 见 `07-ia-skeleton.md` | 草案，未改产品源码 |
 
 ## 本文件夹
 
@@ -50,6 +51,8 @@ Vibe coding 把「很多人一起改」换成「很多段没有共同记忆的�
 - [04-debug.md](04-debug.md) — 真实坑与修复
 - [05-reflection.md](05-reflection.md) — 哪些能做哪些不能、下一步
 - [06-professionalize-discussion.md](06-professionalize-discussion.md) — 先完成再完美、专业化重构原则、咨询如何进 md
+- [07-ia-skeleton.md](07-ia-skeleton.md) — 导演台 IA 骨架草案（主舞台、选中、七槽、三工作区）
+- [08-ia-philosophy-log.md](08-ia-philosophy-log.md) — IA 讨论阶段记录
 
 跨项目提炼：
 
@@ -57,6 +60,10 @@ Vibe coding 把「很多人一起改」换成「很多段没有共同记忆的�
 - [lessons/dev-map-beats-chat.md](../../lessons/dev-map-beats-chat.md)
 - [lessons/complete-then-professionalize.md](../../lessons/complete-then-professionalize.md)
 - [lessons/advice-to-map-loop.md](../../lessons/advice-to-map-loop.md)
+- [lessons/ia-philosophy.md](../../lessons/ia-philosophy.md)
+- [lessons/lock-ia-skeleton.md](../../lessons/lock-ia-skeleton.md)
 - [prompts/architecture/dev-map-first.md](../../prompts/architecture/dev-map-first.md)
 - [prompts/architecture/advice-intake.md](../../prompts/architecture/advice-intake.md)
+- [prompts/architecture/ia-slot-orders.md](../../prompts/architecture/ia-slot-orders.md)
 - [docs/templates/advice-intake.md](../../docs/templates/advice-intake.md)
+- [docs/templates/ia-skeleton.md](../../docs/templates/ia-skeleton.md)

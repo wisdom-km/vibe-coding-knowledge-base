@@ -12,6 +12,7 @@
 
 - [architecture/dev-map-first.md](architecture/dev-map-first.md) — 跨对话项目：地图优先、禁止聊天覆盖事实（来源：mira_new）
 - [architecture/advice-intake.md](architecture/advice-intake.md) — 咨询后只沉淀文档、先不改代码（来源：mira_new）
+- [architecture/ia-slot-orders.md](architecture/ia-slot-orders.md) — 按槽位下单，禁止「整体更专业」（来源：mira_new）
 
 ## 建议分类
 

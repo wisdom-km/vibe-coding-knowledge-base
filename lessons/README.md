@@ -10,6 +10,8 @@
 - [dev-map-beats-chat.md](dev-map-beats-chat.md) — 开发地图覆盖聊天记忆
 - [complete-then-professionalize.md](complete-then-professionalize.md) — 先完成再完美；专业化沿已有接缝加深
 - [advice-to-map-loop.md](advice-to-map-loop.md) — 咨询默认进建议卡，人决定后再改指定 md
+- [ia-philosophy.md](ia-philosophy.md) — IA 是什么、六条组织原则、如何入门
+- [lock-ia-skeleton.md](lock-ia-skeleton.md) — 锁槽位与选择模型，只在骨架里优化
 
 ## 待写主题
 
